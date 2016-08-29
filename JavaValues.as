@@ -14,7 +14,7 @@ package
 	{
 		private var liste:String = "";		
 		private var listeXML:XML = new XML();
-		private var url:String = "https://clients.crown.fr/TVCrown/content/tmp/jsonEditor_fonts/java_fonts.xml";
+		private var url:String = "hosting_rep_url/java_fonts.xml";
 		private var loader:XMLLoader;
 		private var valueName:String;
 		
