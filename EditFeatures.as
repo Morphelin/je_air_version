@@ -41,7 +41,7 @@ package
 			
 			additional_params_type = 'texte';
 			
-			javaValues = new JavaValues('https://clients.crown.fr/TVCrown/content/tmp/jsonEditor_fonts/json_' + additional_params_type + 's_more_params.xml', "param_name");
+			javaValues = new JavaValues('hosting_rep_url/json_' + additional_params_type + 's_more_params.xml', "param_name");
 			
 			if (additional_params)
 			{
@@ -72,7 +72,7 @@ package
 		{
 			evt.target.play();
 			javaValues = null;
-			javaValues = new JavaValues('https://clients.crown.fr/TVCrown/content/tmp/jsonEditor_fonts/json_' + additional_params_type + 's_more_params.xml', "param_name");
+			javaValues = new JavaValues('hosting_rep_url/json_' + additional_params_type + 's_more_params.xml', "param_name");
 		}
 		
 		/**
@@ -95,7 +95,7 @@ package
 		private function refreshValues(evt:MouseEvent = null):void
 		{
 			javaValues = null;
-			javaValues = new JavaValues('https://clients.crown.fr/TVCrown/content/tmp/jsonEditor_fonts/json_' + additional_params_type + 's_more_params.xml', "param_name");
+			javaValues = new JavaValues('hosting_rep_url/json_' + additional_params_type + 's_more_params.xml', "param_name");
 			javaValues.addEventListener('VALUES_READY', updateList)
 			//tf_actualise = (additional_params_type == "texte") ? texte_moreparams.menu['input']:photo_moreparams.menu['input'];
 			if (additional_params_type == "texte")
@@ -259,7 +259,7 @@ package
 			value = value.split('\r').join('');
 			trace ('addNewValue : [' + value + ']');
 			var chargeur:URLLoader = new URLLoader();
-			var request:URLRequest = new URLRequest('https://clients.crown.fr/TVCrown/content/json_editor/jsonEditor_' + valueName+'sUpdate.php');
+			var request:URLRequest = new URLRequest('hosting_rep_url/jsonEditor_' + valueName+'sUpdate.php');
 			if (additional_params) params = "&type=" + additional_params_type;
 			var vars:URLVariables = new URLVariables(valueName + "_name=" + value + "&mode=erase" + params);
 			request.method = 'get';
@@ -285,7 +285,7 @@ package
 			value = value.split('\r').join('');
 			trace ('addNewValue : [' + value + ']');
 			var chargeur:URLLoader = new URLLoader();
-			var request:URLRequest = new URLRequest('https://clients.crown.fr/TVCrown/content/json_editor/jsonEditor_' + valueName+'sUpdate.php');
+			var request:URLRequest = new URLRequest('hosting_rep_url/jsonEditor_' + valueName+'sUpdate.php');
 			trace ('request add : ' + request.url);
 			if (additional_params) params = "&type=" + additional_params_type;
 			var vars:URLVariables = new URLVariables(valueName + "_name=" + value + "&mode=add" + params);
