@@ -45,7 +45,7 @@ package
 			}else {
 					_skin = new MovieClip();
 			}
-			loader = new XMLLoader('https://clients.crown.fr/TVCrown/content/tmp/jsonEditor_fonts/json_' + _type + '_more_params.xml', { onComplete:datasHandler, onError:datasHandler } );
+			loader = new XMLLoader('hosting_rep_url/json_' + _type + '_more_params.xml', { onComplete:datasHandler, onError:datasHandler } );
 			loader.load();
 			_skin.sc.visible = false;
 			_skin.ctn.cacheAsBitmap = true;
@@ -112,7 +112,7 @@ package
 			}
 			a_params = new Array();
 			//_skin.ctn.y = yRef
-			loader = new XMLLoader('https://clients.crown.fr/TVCrown/content/tmp/jsonEditor_fonts/json_' + type + '_more_params.xml', { onComplete:datasHandler, onError:datasHandler } );
+			loader = new XMLLoader('hosting_rep_url/json_' + type + '_more_params.xml', { onComplete:datasHandler, onError:datasHandler } );
 			loader.load();
 			
 		}
