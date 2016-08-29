@@ -356,7 +356,7 @@
 			value = value.split('\r').join('');
 			trace ('addNewFont : [' + value + ']');
 			var chargeur:URLLoader = new URLLoader();
-			var request:URLRequest = new URLRequest('https://clients.crown.fr/TVCrown/content/json_editor/jsonEditor_fontsUpdate.php');
+			var request:URLRequest = new URLRequest('hosting_rep_url/jsonEditor_fontsUpdate.php');
 			var vars:URLVariables = new URLVariables("font=" + value + "&mode=erase");
 			request.method = 'post';
 			request.data = vars;
@@ -380,7 +380,7 @@
 			value = value.split('\r').join('');
 			trace ('addNewFont : [' + value + ']');
 			var chargeur:URLLoader = new URLLoader();
-			var request:URLRequest = new URLRequest('https://clients.crown.fr/TVCrown/content/json_editor/jsonEditor_fontsUpdate.php');
+			var request:URLRequest = new URLRequest('hosting_rep_url/jsonEditor_fontsUpdate.php');
 			var vars:URLVariables = new URLVariables("font=" + value + "&mode=add");
 			request.method = 'get';
 			request.data = vars;
@@ -553,7 +553,7 @@
 			var name:String = clean(cssName_input.text);
 			trace ('erase Style : [' + name + ']');
 			var chargeur:URLLoader = new URLLoader();
-			var request:URLRequest = new URLRequest('https://clients.crown.fr/TVCrown/content/json_editor/jsonEditor_stylesUpdate.php');
+			var request:URLRequest = new URLRequest('hosting_rep_url/jsonEditor_stylesUpdate.php');
 			var vars:URLVariables = new URLVariables("styleName=" + name + '&styleValue=' + value + "&mode=erase");
 			request.method = 'get';
 			request.data = vars;
@@ -628,7 +628,7 @@
 			font_input.addEventListener(FocusEvent.FOCUS_IN, selectionHandler);
 			font_input.addEventListener(Event.CHANGE, selectionHandler);
 			//font_add_bt.addEventListener(MouseEvent.CLICK, addNewFont);uploadFile.php
-			up_font = new UploadFont(font_add_bt, font_input, 'https://clients.crown.fr/TVCrown/content/json_editor/jsonEditor_fontsUpdate.php', selectFont.tf);
+			up_font = new UploadFont(font_add_bt, font_input, 'hosting_rep_url/json_editor/jsonEditor_fontsUpdate.php', selectFont.tf);
 			
 			
 			
